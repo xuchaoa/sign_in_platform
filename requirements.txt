@@ -1,0 +1,12 @@
+celery==3.1.20
+django==1.9
+celery-with-redis
+requests
+redis
+pymysql
+sqlalchemy
+django-celery
+scapy
+django-cors-headers
+
+
