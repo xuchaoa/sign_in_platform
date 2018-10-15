@@ -47,6 +47,7 @@ ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -56,7 +57,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'djcelery',
     'sign_in_app',
-    # 'corsheaders',
+    'corsheaders',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -68,7 +69,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
 ]
 
