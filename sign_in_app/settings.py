@@ -42,7 +42,7 @@ SECRET_KEY = 'k%fxgtkmv6(=^e1_kvyas)3f1d2*fc_^=r*o!^_16+ey8atc&i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -56,7 +56,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'djcelery',
     'sign_in_app',
-    'corsheaders',
+    # 'corsheaders',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -68,7 +68,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
 ]
 
