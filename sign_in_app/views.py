@@ -186,7 +186,7 @@ def log_json(request,*args,**kwargs):
         if (len(stime) != 0 and len(etime) != 0):
             results = session.query(arp_log).filter(and_(arp_log.name == current_username,arp_log.date.between(stime,etime))).all()
         else:
-            results = session.query(arp_log).filter(arp_log.name == current_username).order_by(arp_log.id.desc()).limit(20).all()  # 10条倒序
+            results = session.query(arp_log).filter(arp_log.name == current_username).order_by(arp_log.id.desc()).limit(20).all()  # 20条倒序
         for result in results:
             dic = {
                 'name': result.name,
@@ -197,7 +197,7 @@ def log_json(request,*args,**kwargs):
                 'downflag': result.downflag,
                 'downtime': result.downtime,
                 'date': result.date,
-                'online': True if len(result.stoptime) == 0 else False
+                'online': True if result.stoptime is None or len(result.stoptime) == 0 else False
             }
             log_dic.append(dic)
         session.close()
