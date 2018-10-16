@@ -7,6 +7,6 @@ pymysql
 sqlalchemy
 django-celery
 scapy
-django-cors-headers==2.2.0
+django-cors-headers==2.4.0
 
 

@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from sign_in_app.views import index,index_json,log_json,login,logout
+from sign_in_app.views import index,index_json,log_json,login,logout,day_log_json
 
 
 
@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^api/admin/index/json/$',index_json),
     # url(r'^admin/log/$',admin_log_interface),
     url(r'^api/admin/log/json/$',log_json),
+    url(r'^api/admin/day_log/json/$',day_log_json),
     url(r'^api/login/$',login),
     url(r'^api/logout/$',logout),
     # url(r'^admin/daily/$',admin_daily_interface),
